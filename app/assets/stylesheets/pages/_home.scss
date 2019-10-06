@@ -1,0 +1,34 @@
+// Specific CSS for your home-page
+
+
+body {
+  height: 120%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+
+}
+
+.splash {
+  background-image: image-url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.splash2 {
+  background-image: image-url("background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

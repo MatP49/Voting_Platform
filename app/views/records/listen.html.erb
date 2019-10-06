@@ -1,0 +1,78 @@
+<style>
+	.container2 {
+  align-items: flex-start;
+  display: flex;
+  height: 10em;
+}
+
+.container1 {
+  align-items: flex-start;
+  display: flex;
+  height: 5em;
+}
+
+.container3 {
+  align-items: flex-start;
+  display: flex;
+  height: 3em;
+}
+
+</style>
+
+<head>
+<div class="container1"> </div>
+
+<center>
+
+<h1 id="myHeader" style="font-family: 'Lobster', cursive;", serif;> Voting page</h1>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+<div class="container2"> </div>
+</center>
+
+</head>
+
+        <body class="splash2">
+
+<center>
+
+
+      
+
+    <% @items.each_slice(100) do |items| %>
+   
+     <div class="row">
+    
+    <% @items.each do |item| %>
+    <div class="col-md-4">
+  
+        <h4><%= link_to item.axis, item %><br>
+      Submitted <%= time_ago_in_words(item.created_at) %> ago
+    </h4>
+    <%= link_to like_item_path(item), method: :put do %>
+  Upvote
+  <%= item.get_upvotes.size %> ---
+  <%= link_to dislike_item_path(item), method: :put do %>
+  Downvote
+  <%= item.get_downvotes.size %>
+<% end %>
+<% end %>
+<div class="container3"> </div>
+
+  
+</div>
+
+
+
+<% end %>
+
+</div>
+    
+    <% end %>
+
+
+
+</center>
+</body>
+</html>
